@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+  <title>산타마을 1학년 1인 1역</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Gaegu:wght@700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container": "#edecff",
+            "surface-variant": "#e0e0fc",
+            "surface-container-highest": "#e0e0fc",
+            "tertiary-container": "#8f6500",
+            "secondary-fixed-dim": "#7edb85",
+            "on-secondary-fixed-variant": "#00531b",
+            "inverse-primary": "#ffb3af",
+            "secondary-container": "#99f89e",
+            "primary-fixed": "#ffdad7",
+            "on-background": "#181a2e",
+            "on-tertiary-container": "#ffecd3",
+            "primary": "#ac001e",
+            "tertiary-fixed": "#ffdea9",
+            "tertiary": "#704e00",
+            "on-secondary-container": "#0e742c",
+            "on-tertiary-fixed": "#271900",
+            "outline-variant": "#e7bcba",
+            "secondary-fixed": "#99f89e",
+            "inverse-surface": "#2d2f44",
+            "on-primary-container": "#ffeae8",
+            "outline": "#926e6c",
+            "surface": "#fbf8ff",
+            "surface-dim": "#d7d8f4",
+            "surface-tint": "#bf0022",
+            "on-surface": "#181a2e",
+            "surface-container-lowest": "#ffffff",
+            "surface-bright": "#fbf8ff",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#410005",
+            "on-primary-fixed-variant": "#930018",
+            "inverse-on-surface": "#f1efff",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#5e4100",
+            "on-error": "#ffffff",
+            "background": "#fbf8ff",
+            "tertiary-fixed-dim": "#ffba27",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#ffb3af",
+            "surface-container-high": "#e6e6ff",
+            "on-secondary": "#ffffff",
+            "secondary": "#006e26",
+            "on-tertiary": "#ffffff",
+            "primary-container": "#d90429",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed": "#002106",
+            "on-surface-variant": "#5d3f3d",
+            "surface-container-low": "#f4f2ff"
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-lg": "2rem",
+            "space-xs": "0.375rem",
+            "margin-mobile": "1rem",
+            "space-xl": "3rem",
+            "space-md": "1.25rem",
+            "space-sm": "0.75rem",
+            "gutter": "1.25rem",
+            "gutter-mobile": "0.75rem",
+            "margin": "2rem"
+          },
+          fontFamily: {
+            "headline-xl-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "body-xl": ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-xl": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          fontSize: {
+            "headline-xl-mobile": ["30px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+            "label-md": ["15px", { "lineHeight": "20px", "fontWeight": "700" }],
+            "body-xl": ["20px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "500" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "700" }],
+            "headline-lg": ["32px", { "lineHeight": "44px", "letterSpacing": "0em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "label-lg": ["18px", { "lineHeight": "24px", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "30px", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "34px", "fontWeight": "700" }],
+            "label-sm": ["13px", { "lineHeight": "18px", "fontWeight": "600" }],
+            "headline-xl": ["40px", { "lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "800" }]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @layer base {
+      html, body {
+        width: 100%;
+        min-height: 100dvh;
+        margin: 0;
+        padding: 0;
+        background-color: #fbf8ff;
+        color: #181a2e;
+        overflow-x: hidden;
+      }
+      body {
+        overscroll-behavior-y: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e7bcba;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen">
+  <!-- 상단 고정 헤더 -->
+  <header class="fixed top-0 left-0 right-0 z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(217,4,41,0.06)]">
+    <div class="max-w-6xl mx-auto h-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 md:w-12 md:h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary shadow-[0_3px_0_#A8001E] shrink-0">
+          <span class="material-symbols-outlined text-[26px]">notifications_active</span>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1">
+            <span class="font-label-sm text-label-sm text-secondary font-bold">⭐ 사랑 가득 1학년 2반 ⭐</span>
+          </div>
+          <h1 class="font-headline-sm text-headline-sm md:text-headline-md text-primary flex items-center gap-1.5 tracking-tight">
+            산타마을 1인 1역 <span class="text-[20px] md:text-[24px]">🎄</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5 md:gap-4">
+        <div class="hidden sm:flex items-center gap-1.5 bg-secondary-container/70 text-on-secondary-container px-3.5 py-1.5 rounded-full text-label-sm font-bold">
+          <span>오늘도 반짝반짝 우리 반!</span>
+        </div>
+        <div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary shadow-[0_2px_0_#8F6500]">
+          <span class="material-symbols-outlined text-[22px]">stars</span>
+        </div>
+        <div class="p-0.5 rounded-full bg-primary/20">
+          <img alt="Profile" class="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmp7o9hfnIV4QhAkT4OwZbqKpLUigYzeGQCqfruFKdAQsjid9thbRvnc3EQkpvgoW_tVz8m6BCkc33qqHBVzDKjurC74L9Wthyslm5OSg2HTEa2auLUGsZP3CEHwY0Mi1KbOqjQGJ_rhu3GFEiUj5-6Oyj93CV9P9QmObt2COEjWPiXFH8BDoAMSurlFtNE_h_z6o7v7cQ98rMuKx7DARKSJkDEWv26rjG4zW0EpEH"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 메인 콘텐츠: 모바일 1열 / 데스크톱 12컬럼 2단 그리드 -->
+  <main class="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-32 md:pb-36 bg-surface">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-7 items-start">
+      
+      <!-- 왼쪽 영역 (모바일 전체 / 데스크톱 7컬럼): 진행도 배지 + 보상 배너 + 인터랙티브 트리 -->
+      <div class="lg:col-span-7 flex flex-col gap-4 sm:gap-5">
+        <!-- 상단 상태 카드 2개 (태블릿 이상에서는 가로 2열 배치) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
+          <!-- Progress Milestone Header Badge -->
+          <div class="w-full bg-surface-container rounded-lg p-4 shadow-md flex items-center justify-between gap-2">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-11 h-11 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-headline-sm shrink-0">
+                🎄
+              </div>
+              <div class="min-w-0">
+                <p class="font-label-sm text-label-sm text-secondary font-bold">우리 반 협동 미션</p>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface truncate">
+                  트리 완성도 <span class="text-primary font-extrabold">85%</span>
+                </h2>
+              </div>
+            </div>
+            <div class="bg-primary-container text-on-primary font-label-md text-label-md px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1 shrink-0">
+              <span class="material-symbols-outlined text-[18px]">verified</span>
+              <span>18 / 21명</span>
+            </div>
+          </div>
+
+          <!-- Surprise Reward Banner -->
+          <div class="relative overflow-hidden w-full bg-tertiary-fixed text-on-tertiary-fixed rounded-lg p-4 shadow-md flex items-center">
+            <div class="flex items-center gap-3 w-full">
+              <div class="w-11 h-11 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center text-[24px] shrink-0 shadow-inner">
+                🍿
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="font-label-sm text-label-sm bg-tertiary text-on-tertiary px-2 py-0.5 rounded-full">목표 보상</span>
+                  <span class="font-label-sm text-label-sm text-tertiary font-bold">3명 남았어요!</span>
+                </div>
+                <p class="font-body-md text-body-md font-bold truncate mt-0.5">모두 완료 시 방과후 달콤 팝콘 파티! 🎉</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Visual Interactive Tree Arena -->
+        <div class="relative w-full bg-surface-container-lowest rounded-lg p-5 sm:p-8 lg:py-10 shadow-lg flex flex-col items-center justify-center overflow-hidden">
+          <!-- Ambient Snow Dots Background -->
+          <div class="absolute inset-0 pointer-events-none opacity-45">
+            <div class="absolute top-5 left-8 text-primary-fixed text-xl">❄️</div>
+            <div class="absolute top-12 right-10 text-secondary-fixed-dim text-base">✨</div>
+            <div class="absolute bottom-16 left-12 text-tertiary-fixed-dim text-lg">⭐</div>
+            <div class="absolute top-28 left-1/4 text-primary text-xs">●</div>
+            <div class="absolute top-1/2 right-8 text-secondary text-xs">●</div>
+            <div class="absolute bottom-8 right-1/4 text-tertiary text-base">❄️</div>
+          </div>
+
+          <!-- Tree Top Golden Star (Teacher Special Praise Stamp) -->
+          <div class="relative z-10 flex flex-col items-center mb-1 group cursor-pointer" onclick="celebrateStar(event)">
+            <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary shadow-[0_4px_16px_rgba(255,186,39,0.5)] animate-pulse group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[36px] md:text-[42px]" style="font-variation-settings: 'FILL' 1;">hotel_class</span>
+            </div>
+            <span class="font-label-sm text-label-sm bg-tertiary-container text-on-tertiary-container px-3 py-0.5 rounded-full mt-1 font-bold shadow-sm">
+              선생님 슈퍼 스탬프 ⭐
+            </span>
+          </div>
+
+          <!-- Tier 1: Top Branch -->
+          <div class="relative z-10 w-36 sm:w-44 md:w-52 h-20 sm:h-24 md:h-28 bg-secondary rounded-full flex items-center justify-center -mt-2 shadow-md transition-all">
+            <div class="flex items-center justify-around w-full px-4 sm:px-6">
+              <button class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-primary text-on-primary flex items-center justify-center text-[13px] md:text-[16px] shadow-sm transform hover:scale-125 transition-transform" title="1번 민지" type="button">🔔</button>
+              <button class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-tertiary-fixed-dim text-on-tertiary flex items-center justify-center text-[13px] md:text-[16px] shadow-sm transform hover:scale-125 transition-transform" title="2번 시우" type="button">⭐</button>
+              <button class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center text-[13px] md:text-[16px] shadow-sm transform hover:scale-125 transition-transform" title="3번 하은" type="button">🎁</button>
+            </div>
+          </div>
+
+          <!-- Tier 2: Middle Branch -->
+          <div class="relative z-10 w-56 sm:w-72 md:w-80 h-24 sm:h-28 md:h-32 bg-secondary rounded-full flex items-center justify-center -mt-5 sm:-mt-6 shadow-md transition-all">
+            <div class="grid grid-cols-6 gap-1 sm:gap-2 items-center justify-items-center w-full px-4 sm:px-6">
+              <button class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-[12px] md:text-[15px] shadow-sm transform hover:scale-125 transition-transform" title="4번 준우" type="button">🍬</button>
+              <button class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center text-[12px] md:text-[15px] shadow-sm transform hover:scale-125 transition-transform" title="5번 서연" type="button">🧸</button>
+              <button class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center text-[12px] md:text-[15px] shadow-sm transform hover:scale-125 transition-transform" title="6번 도윤" type="button">❄️</button>
+              <button class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-primary text-on-primary flex items-center justify-center text-[12px] md:text-[15px] shadow-sm transform hover:scale-125 transition-transform" title="7번 지우" type="button">⭐</button>
+              <button class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center text-[12px] md:text-[15px] shadow-sm transform hover:scale-125 transition-transform" title="8번 예은" type="button">🎀</button>
+              <button class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 rounded-full bg-primary-fixed-dim text-primary flex items-center justify-center text-[12px] md:text-[15px] shadow-sm transform hover:scale-125 transition-transform" title="9번 하준" type="button">🍭</button>
+            </div>
+          </div>
+
+          <!-- Tier 3: Bottom Large Branch -->
+          <div class="relative z-10 w-72 sm:w-96 md:w-[27rem] h-28 sm:h-32 md:h-36 bg-secondary rounded-full flex items-center justify-center -mt-6 sm:-mt-7 shadow-md transition-all">
+            <div class="grid grid-cols-9 gap-1 sm:gap-1.5 items-center justify-items-center w-full px-3 sm:px-6">
+              <button class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-[11px] md:text-[14px] shadow-sm transform hover:scale-125 transition-transform" title="10번 윤아" type="button">🍎</button>
+              <button class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-tertiary-fixed-dim text-on-tertiary flex items-center justify-center text-[11px] md:text-[14px] shadow-sm transform hover:scale-125 transition-transform" title="11번 건우" type="button">⭐</button>
+              <button class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center text-[11px] md:text-[14px] shadow-sm transform hover:scale-125 transition-transform" title="12번 수아" type="button">🔔</button>
+              <button class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center text-[11px] md:text-[14px] shadow-sm transform hover:scale-125 transition-transform" title="13번 현우" type="button">🍪</button>
+              <button class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center text-[11px] md:text-[14px] shadow-sm transform hover:scale-125 transition-transform" title="14번 채원" type="button">🧸</button>
+              <button class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center text-[11px] md:text-[14px] shadow-sm transform hover:scale-125 transition-transform" title="15번 승민" type="button">🌟</button>
+              <button class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-[11px] md:text-[14px] shadow-sm transform hover:scale-125 transition-transform" title="16번 다은" type="button">🎁</button>
+              <button class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-secondary-fixed-dim text-on-secondary flex items-center justify-center text-[11px] md:text-[14px] shadow-sm transform hover:scale-125 transition-transform" title="17번 지후" type="button">✨</button>
+              <button class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-tertiary-fixed-dim text-on-tertiary flex items-center justify-center text-[11px] md:text-[14px] shadow-sm transform hover:scale-125 transition-transform" title="18번 민우" type="button">❤️</button>
+            </div>
+          </div>
+
+          <!-- Tree Trunk -->
+          <div class="relative z-0 w-14 sm:w-16 md:w-20 h-12 sm:h-14 md:h-16 bg-tertiary rounded-b-lg -mt-3 shadow-inner"></div>
+
+          <!-- Tree Stand & Gifts Area -->
+          <div class="relative z-10 w-full flex items-center justify-center gap-2 -mt-2">
+            <div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full shadow-sm">
+              <span class="font-label-sm text-label-sm text-outline font-bold">기다리는 전구:</span>
+              <div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center text-outline text-xs font-bold">19</div>
+              <div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center text-outline text-xs font-bold">20</div>
+              <div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center text-outline text-xs font-bold">21</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 오른쪽 영역 (모바일 하단 / 데스크톱 5컬럼): 내 루돌프 도장 + 칭찬 편지함 + 칭찬 보내기 버튼 -->
+      <div class="lg:col-span-5 flex flex-col gap-4 sm:gap-5">
+        <!-- My Weekly Praise Stamp Card -->
+        <div class="w-full bg-surface-container-lowest rounded-lg p-4 sm:p-5 shadow-md flex flex-col gap-3">
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-1.5">
+              <span class="text-[20px]">🦌</span>
+              <h3 class="font-headline-sm text-headline-sm text-primary">이번 주 내 루돌프 도장</h3>
+            </div>
+            <span class="font-label-sm text-label-sm bg-primary-fixed text-primary px-2.5 py-0.5 rounded-full font-bold shrink-0">4일 연속 성공!</span>
+          </div>
+          <p class="font-label-sm text-label-sm text-on-surface-variant">매일 1인 1역을 실천하면 루돌프 썰매가 달려와요 🛷</p>
+
+          <!-- Stamp 5-Day Grid -->
+          <div class="grid grid-cols-5 gap-2 pt-1">
+            <!-- Mon -->
+            <div class="flex flex-col items-center justify-center bg-secondary-fixed/30 rounded-lg py-2.5">
+              <span class="font-label-sm text-label-sm text-secondary font-bold mb-1">월</span>
+              <div class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm">
+                <span class="material-symbols-outlined text-[20px]">check</span>
+              </div>
+            </div>
+            <!-- Tue -->
+            <div class="flex flex-col items-center justify-center bg-secondary-fixed/30 rounded-lg py-2.5">
+              <span class="font-label-sm text-label-sm text-secondary font-bold mb-1">화</span>
+              <div class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm">
+                <span class="material-symbols-outlined text-[20px]">check</span>
+              </div>
+            </div>
+            <!-- Wed -->
+            <div class="flex flex-col items-center justify-center bg-secondary-fixed/30 rounded-lg py-2.5">
+              <span class="font-label-sm text-label-sm text-secondary font-bold mb-1">수</span>
+              <div class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm">
+                <span class="material-symbols-outlined text-[20px
